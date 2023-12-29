@@ -67,7 +67,7 @@ function Dashboard() {
  
   return (
     <>
-      <div className='card border shadow p-4' style={{width:'400px',position:'fixed',zIndex:'1',marginTop:'20px',marginBottom:'50px'}}>
+      <div className='card border shadow p-4' style={{width:'400px',position:'fixed',zIndex:'1',marginTop:'20px'}}>
         <div className='d-flex align-items-center flex-column'>
            <h3 className='fs-2 text-light mb-2'>Snapify</h3>
            <label className='text-center'>
