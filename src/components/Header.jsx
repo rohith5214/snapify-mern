@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Container, Navbar } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { tokenAuthorizationContext } from '../Context/TokenAuth'
 function Header({insideDashboard}) {
   const {Isauthorized,setIsAuthorized} = useContext(tokenAuthorizationContext)
@@ -16,9 +16,9 @@ function Header({insideDashboard}) {
   return (
     <>
       
-      <Navbar expand="lg" className='bg-info rounded w-100' style={{zIndex:'1',position:'fixed'}}>
+      <Navbar expand="lg" className='bg-info rounded w-100'>
       <Container>
-        <Navbar.Brand className='text-light fw-bolder fs-2'><i class="fa-solid fa-camera me-1"></i>Snapify</Navbar.Brand>
+        <Navbar.Brand className='text-light fw-bolder fs-2' ><Link to={'/'} style={{textDecoration:'none'}}><i class="fa-solid fa-camera me-1"></i>Snapify</Link></Navbar.Brand>
         {
           insideDashboard && 
           <button onClick={handleLogout} className='btn btn-danger ms-auto text-light fs-5'>Logout<i class="fa-solid fa-right-from-bracket"></i></button>

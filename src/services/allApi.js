@@ -26,3 +26,11 @@ export const  deletePostAPI = async(projectId,reqHeader)=>{
 export const updateUserAPI = async(reqBody,reqHeader)=>{
     return await commonAPI("PUT",`${base_url}/user/edit`,reqBody,reqHeader)
 }
+
+export const getAllPostsApi = async()=>{
+    return await commonAPI("GET",`${base_url}/post/get`,"","")
+}
+
+export const getAllUsersApi = async()=>{
+    return await commonAPI("GET",`${base_url}/user/get`,"","")
+}

@@ -1,1 +1,1 @@
-export const base_url = "https://snapserver-kqkv.onrender.com"
+export const base_url = "http://localhost:4000"

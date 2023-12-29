@@ -45,7 +45,7 @@ function Mypost() {
   
   return (
     <>
-     <div  className='border d-flex justify-content-evenly shadow p-3 rounded mt-5' >
+     <div  className='border d-flex justify-content-evenly shadow p-3 rounded mt-3' >
      {
       getPost?.length>0?getPost.map(post=>(
         <Card style={{ width:'18rem' }} className='me-2'>

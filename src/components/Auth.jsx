@@ -19,7 +19,7 @@ function Auth({register}) {
       e.preventDefault()
       const {username,email,password} = userdata
       if(!username ||!email ||!password){
-        alert("Please fill The form completely")
+        toast.warning("Please fill The form completely")
       }else{
         const result = await registerAPI(userdata)
         if(result.status===200){
@@ -40,7 +40,7 @@ function Auth({register}) {
       e.preventDefault()
       const {email,password} = userdata
       if(!email ||!password){
-        alert("Please fill the form completely")
+        toast.warning("Please fill the form completely")
       }else{
         const result = await loginAPI(userdata)
         if(result.status===200){
@@ -60,8 +60,10 @@ function Auth({register}) {
   return (
     <>
     <Header/>
+    <Link to={'/'}><button className='btn text-center'><i className="fa-solid fa-arrow-left me-2">Back To Home</i></button></Link>
+
       <div height={'100vh'} className='d-flex justify-content-center align-items-center w-100'>
-        <div style={{width:'500px',marginTop:'130px'}} className='card border rounded shadow p-4  mb-3'>
+        <div style={{width:'500px',marginTop:'40px'}} className='card border rounded shadow p-4  mb-3'>
            <div className='d-flex align-items-center flex-column'>
            <h2 className='text-info'><i class="fa-solid fa-camera me-1"></i>Snapify</h2>
            <h3 className='text-info'>
@@ -87,7 +89,7 @@ function Auth({register}) {
                             isRegisterForm ?
                             <div>
                                 <button onClick={handleRegister}  className='btn btn-info'>Register</button>
-                                <p className='text-info'>Already have an account? Click here to <Link to={'/'} className='text-danger'>Login</Link></p>
+                                <p className='text-info'>Already have an account? Click here to <Link to={'/login'} className='text-danger'>Login</Link></p>
                             </div>:
                             <div>
                             <button onClick={handleLogin}  className='btn btn-info'>Login</button>
